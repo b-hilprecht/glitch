@@ -7,7 +7,8 @@ use std::{
     time::{Duration, Instant},
 };
 
-use crate::{util::sample_failure_time, NodeId};
+use crate::node::NodeId;
+use crate::util::sample_failure_time;
 
 use super::{DeliverMessage, NetworkConfig};
 

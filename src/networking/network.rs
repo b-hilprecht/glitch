@@ -5,7 +5,8 @@ use std::collections::HashMap;
 use std::rc::Rc;
 use std::time::{Duration, Instant};
 
-use crate::{NodeId, ProtocolMessage};
+use crate::node::NodeId;
+use crate::ProtocolMessage;
 
 use super::link::Link;
 use super::partition::NetworkPartition;

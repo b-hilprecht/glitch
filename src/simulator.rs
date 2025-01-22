@@ -9,10 +9,13 @@ use std::{
     time::{Duration, Instant},
 };
 
-use crate::{node::Node, Configuration};
+use crate::{
+    node::{Node, NodeId},
+    Configuration,
+};
 
 use super::{
-    model::{DeterministicClient, DeterministicNode, InvariantChecker, NodeId, ProtocolMessage},
+    model::{DeterministicClient, DeterministicNode, InvariantChecker, ProtocolMessage},
     Network,
 };
 

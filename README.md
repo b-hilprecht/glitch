@@ -16,7 +16,7 @@ Glitch is a framework for testing distributed system protocols under various net
 
 ## Usage
 
-To test your protocol, implement these key traits:
+To test your protocol, implement these key [traits](./src/model.rs):
 
 ```rust
 // Define your protocol messages
@@ -42,6 +42,10 @@ impl DeterministicNode for EchoServer {
             }
             _ => vec![],
         }
+    }
+
+    fn tick(&mut self, now: Instant) -> Vec<Self::Message> {
+        // periodic tasks, e.g., sending heartbeats
     }
     // ... other required methods
 }

@@ -4,8 +4,8 @@ mod tests {
     use tracing_subscriber::FmtSubscriber;
 
     use crate::{
-        Configuration, DeterministicClient, DeterministicNode, InvariantChecker, NetworkConfig,
-        Node, NodeId, ProtocolMessage, Simulator,
+        node::NodeId, Configuration, DeterministicClient, DeterministicNode, InvariantChecker,
+        NetworkConfig, Node, ProtocolMessage, Simulator,
     };
     use std::{
         collections::HashSet,

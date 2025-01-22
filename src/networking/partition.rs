@@ -6,8 +6,8 @@ use std::collections::HashSet;
 use std::rc::Rc;
 use std::time::Instant;
 
+use crate::node::NodeId;
 use crate::util::sample_failure_time;
-use crate::NodeId;
 
 use super::NetworkConfig;
 

@@ -1,11 +1,27 @@
 use rand::prelude::*;
 use rand_chacha::ChaCha8Rng;
 use std::time::Instant;
+use std::{fmt, fmt::Debug};
 use tracing::info;
 
 use derive_more::derive::IsVariant;
 
-use crate::{util::sample_failure_time, DeterministicNode, FailureConfiguration, NodeId};
+use crate::{util::sample_failure_time, DeterministicNode, FailureConfiguration};
+
+#[derive(Debug, Clone, Copy, Eq, PartialEq, Ord, PartialOrd, Hash)]
+pub enum NodeId {
+    Node(usize),
+    Client(usize),
+}
+
+impl fmt::Display for NodeId {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            NodeId::Node(id) => write!(f, "Node({})", id),
+            NodeId::Client(id) => write!(f, "Client({})", id),
+        }
+    }
+}
 
 #[derive(Debug)]
 pub struct Node<N: DeterministicNode> {

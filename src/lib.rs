@@ -9,5 +9,5 @@ mod util;
 pub use config::{Configuration, FailureConfiguration};
 pub use model::*;
 pub use networking::*;
-pub use node::Node;
+pub use node::{Node, NodeId};
 pub use simulator::Simulator;
