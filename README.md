@@ -1,6 +1,6 @@
 # Glitch
 
-Glitch is a framework for testing distributed system protocols under various network and node failure conditions. It provides a deterministic simulation environment where you can verify protocol correctness under adverse conditions. Check out how to simulate a full-fledged consensus algorithm [here](https://github.com/b-hilprecht/viewstamped-replication-rs).
+Glitch is a framework for testing distributed system protocols under various network and node failure conditions. It provides a deterministic simulation environment where you can verify protocol correctness under adverse conditions. Check out how to simulate a full-fledged consensus algorithm [here](https://github.com/b-hilprecht/viewstamped-replication-rs). A more detailed explanation can be found in the [blog post](https://b-hilprecht.github.io/glitch/).
 
 ## Features
 
